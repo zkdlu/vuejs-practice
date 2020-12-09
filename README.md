@@ -5,3 +5,10 @@
 
 - 상용버전, 속도 용량 최적화
 > <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+
+
+## Single file component
+1. npm install -g @vue/cli
+2. vue create 이름{소문자만 되더라}
+3. cd 이름
+4. npm run serve
