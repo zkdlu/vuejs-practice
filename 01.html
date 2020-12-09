@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+      <div id="app">
+            <h3>연습</h3>
+           <div @click='test1()'>{{message}}</div>
+      </div>
+      <script>
+            new Vue({
+                  el: "#app",
+                  data: {
+                        message: "안녕"
+                  },
+                  methods: {
+                        test1() {
+                              this.message = "응 안녕";
+                        }
+                  }
+            })
+      </script>
+</body>
+</html>
