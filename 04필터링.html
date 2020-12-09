@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <div>
+                        serach = <input type="text" v-model="value">
+                  </div>
+                  <ul v-for="user in search()">
+                        name={{user}}
+                  </ul>
+            </div>
+      </div>
+      <script>
+		var data = {
+			list:["홍길동", "음냐뤼", "휘리릭", "흠냐뤼"],
+                  value:""
+		}
+		var vm = new Vue({
+			el: '#app',
+			data:data,
+                  methods:{
+				search:function(){
+					if(this.value.length==0)
+						return this.list;
+
+					return this.list.filter((name)=>{
+						return name.indexOf(this.value)!=-1;
+                              })
+                        }
+                  }
+		})
+      </script>
+</body>
+</html>

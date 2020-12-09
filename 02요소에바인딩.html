@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+      <div id="app">
+            <div :id="count">
+                  count={{count}}
+            </div>
+      </div>
+      <script>
+		var app1 = new Vue({
+			el:"#app",
+			data:{
+                count:1
+			},
+            created:function(){
+				this.addCount();
+            },
+            methods:{
+				addCount:function(){
+					setInterval(() => {
+						this.count++;
+                    },500)
+                }
+            }
+		})
+      </script>
+</body>
+</html>

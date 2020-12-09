@@ -1,0 +1,42 @@
+
+<!DOCKTYPE html>
+<html>
+    <heaed>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </heaed>
+    <body>
+        <div id="app">
+            <div>
+                <input type="text" v-model="value" @keydown.enter="add"/>
+                <button class="btn_add" @click="add">추가</button>
+                <button class="btn_add" v-on:click="add">추가2</button>
+            </div>
+            <div class="list">
+                <ul v-for="(l, index) in list">
+                    <li>{{index}} : {{l}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    list: ["a", "b", "c"],
+                    value: ""
+                },
+                methods: {
+                    add(){
+                        if (this.value.length == 0){
+                            return;
+                        }
+                        this.list.push(this.value);
+                        this.value = "";
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

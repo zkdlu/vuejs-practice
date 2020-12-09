@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+      <button @click="toggle">
+            토글
+      </button>
+      <template v-if="visible">
+            <div>test1</div>
+            <div>test2</div>
+      </template>
+      <template v-else>
+            <div>else test1</div>
+            <div>else test2</div>
+      </template>
+</div>
+
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			visible:true
+		},
+		methods:{
+			toggle:function(){
+				this.visible=!this.visible;
+            }
+		}
+	})
+</script>
+</body>
+</html>

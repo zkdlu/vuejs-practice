@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+      <div id="app">
+            <input type='text' v-model="name"/>
+            <div>
+                  입력한내용 : {{name}}
+            </div>
+      </div>
+
+      <script>
+		var app1 = new Vue({
+			el:"#app",
+			data:{
+                name:"data"
+			}
+		})
+      </script>
+</body>
+</html>
